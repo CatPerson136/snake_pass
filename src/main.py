@@ -21,7 +21,8 @@ window = ctk.CTk()
 window.geometry("300x300CatPerson136")  # this is window size
 window.title("Key Reader")  # this is the window title
 
-# This button will start the java file. Which is KeyReader.java
+# This button will start the java file.
+# Which is KeyReader.java
 btn = ctk.CTkButton(master=window, text="Start").place(
     relx=0.5, rely=0.5, anchor=ctk.CENTER
 )
