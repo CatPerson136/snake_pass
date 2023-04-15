@@ -15,7 +15,7 @@ import customtkinter as ctk
 ctk.set_appearance_mode("Dark")
 ctk.set_default_color_theme("blue")
 
-# Begining of the window code
+# Top of the window code.
 window = ctk.CTk()
 
 window.geometry("300x300")  # window size
