@@ -1,2 +1,3 @@
 # Snake Pass
-Password genrator with python and java.
+
+An open source password generator made to be easy to use.
