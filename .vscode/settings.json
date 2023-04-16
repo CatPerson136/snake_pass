@@ -1,3 +1,7 @@
 {
-    "python.formatting.provider": "black"
+    "python.formatting.provider": "black",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "src/com/cat/lib/py4j0.10.9.7.jar"
+    ]
 }

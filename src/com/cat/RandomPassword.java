@@ -1,4 +1,8 @@
-// TODO: This will be the import of Jython
+// This is where the files are.
+package cat;
+
+// This will be the import of py4j gateway server. 
+import py4j.*;
 
 // This is the start of the class
 public class RandomPassword {
@@ -6,7 +10,7 @@ public class RandomPassword {
      * Thanks to Geeks or Geeks for the code.
      * The code can be found here:
      * https://www.geeksforgeeks.org/generate-random-string-of-given-size-in-java/
-     * I also modfied it to add other characters as well.
+     * I also modfied it to add other characters as.
      */
     static String getAlphaNumericString(int n) {
         // Choose a Character random from this String
@@ -27,6 +31,7 @@ public class RandomPassword {
     }
 
     public static void main(String[] args) {
+
         // Gets the string function add displays it
         System.out.println(RandomPassword.getAlphaNumericString(30));
     }
