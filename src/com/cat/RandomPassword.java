@@ -2,7 +2,7 @@
 package cat;
 
 // This will be the import of py4j gateway server. 
-import py4j.*;
+import py4j.GatewayServer;
 
 // This is the start of the class
 public class RandomPassword {
@@ -14,7 +14,7 @@ public class RandomPassword {
      */
     static String getAlphaNumericString(int n) {
         // Choose a Character random from this String
-        String AlphaNumericString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        String passStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                 + "0123456789"
                 + "abcdefghijklmnopqrstuvxyz"
                 + "!@#$%^&*{}:w?";
@@ -23,15 +23,23 @@ public class RandomPassword {
         for (int i = 0; i < n; i++) {
             // Generates a random number between
             // 0 to AlphaNumericString variable length
-            int index = (int) (AlphaNumericString.length() * Math.random());
+            int index = (int) (passStr.length() * Math.random());
             // Add character one by one in end of sb
-            sb.append(AlphaNumericString.charAt(index));
+            sb.append(passStr.charAt(index));
         }
         return sb.toString();
     }
 
-    public static void main(String[] args) {
+    public static void printPass() {
         // This is the gateway needed to use in the python file.
+        System.out.println(RandomPassword.getAlphaNumericString(30));
+    }
+
+    public static void main(String[] args) {
+        // This will start the gateway server with a custom port of 69420.
         GatewayServer gs = new GatewayServer(new RandomPassword(), 69420);
+        // This will start the server.
+        gs.start();
+        printPass();
     }
 }

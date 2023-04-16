@@ -11,6 +11,15 @@
 # Importing the GUI module for the app.
 import customtkinter as ctk
 
+# Importing py4j module
+from py4j.java_gateway import JavaGateway
+
+# Java gateway
+gateway = JavaGateway()
+
+# Getting the print statment
+print_string = gateway.entry_point.getAlphaNumericString()
+
 # Setting the theme and the colour scheme.
 ctk.set_appearance_mode("Dark")
 ctk.set_default_color_theme("blue")
@@ -31,3 +40,7 @@ btn = ctk.CTkButton(master=window, text="Start").place(
 # label = ctk.CTkLabel()
 
 window.mainloop()  # Buttom of the window code.
+
+
+def get_password():
+    pass
