@@ -12,10 +12,10 @@
 import customtkinter as ctk
 
 # Importing py4j module
-from py4j.java_gateway import JavaGateway
+from py4j.java_gateway import JavaGateway, GatewayParameters
 
 # Java gateway
-gateway = JavaGateway()
+gateway = JavaGateway(gateway_parameters=GatewayParameters(port=69420))
 
 # Getting the print statment
 print_string = gateway.entry_point.getAlphaNumericString()
