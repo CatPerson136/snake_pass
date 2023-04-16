@@ -31,8 +31,7 @@ public class RandomPassword {
     }
 
     public static void main(String[] args) {
-
-        // Gets the string function add displays it
-        System.out.println(RandomPassword.getAlphaNumericString(30));
+        // This is the gateway needed to use in the python file.
+        GatewayServer gs = new GatewayServer(new RandomPassword(), 69420);
     }
 }
