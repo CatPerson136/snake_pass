@@ -18,8 +18,8 @@ ctk.set_default_color_theme("blue")
 # Top of the window code.
 window = ctk.CTk()
 
-window.geometry("300x300CatPerson136")  # this is window size
-window.title("Key Reader")  # this is the window title
+window.geometry("300x300")  # this is window size
+window.title("Snake Pass")  # this is the window title
 
 # This button will start the java file.
 # Which is KeyReader.java
