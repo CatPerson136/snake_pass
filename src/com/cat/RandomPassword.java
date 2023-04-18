@@ -37,8 +37,8 @@ public class RandomPassword {
 
     public static void main(String[] args) {
         // This will start the gateway server with a custom port of 69420.
-        GatewayServer gs = new GatewayServer(new RandomPassword(), 69420);
-        // This will start the server.
+        GatewayServer gs = new GatewayServer(new RandomPassword());
+        // This will start the server
         gs.start();
         printPass();
     }
