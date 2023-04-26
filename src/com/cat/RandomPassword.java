@@ -7,7 +7,7 @@ public class RandomPassword {
      * Thanks to Geeks or Geeks for the code.
      * The code can be found here:
      * https://www.geeksforgeeks.org/generate-random-string-of-given-size-in-java/
-     * I also modfied it to add other characters as.
+     * I also modified it to add other characters as.
      */
     static String getAlphaNumericString(int n) {
         // Choose a Character random from this String
