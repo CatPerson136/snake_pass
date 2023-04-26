@@ -27,12 +27,7 @@ public class RandomPassword {
         return sb.toString();
     }
 
-    public static void printPassword() {
-        // This is the gateway needed to use in the python file.
-        System.out.println(RandomPassword.getAlphaNumericString(30));
-    }
-
     public static void main(String[] args) {
-        printPassword();
+        System.out.println(RandomPassword.getAlphaNumericString(30));
     }
 }
