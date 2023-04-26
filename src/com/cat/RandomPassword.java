@@ -1,9 +1,6 @@
 // This is where the files are.
 package cat;
 
-// This will be the import of py4j gateway server. 
-import py4j.GatewayServer;
-
 // This is the start of the class
 public class RandomPassword {
     /*
@@ -30,16 +27,12 @@ public class RandomPassword {
         return sb.toString();
     }
 
-    public static void printPass() {
+    public static void printPassword() {
         // This is the gateway needed to use in the python file.
         System.out.println(RandomPassword.getAlphaNumericString(30));
     }
 
     public static void main(String[] args) {
-        // This will start the gateway server with a custom port of 69420.
-        GatewayServer gs = new GatewayServer(new RandomPassword());
-        // This will start the server
-        gs.start();
-        printPass();
+        printPassword();
     }
 }
