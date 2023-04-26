@@ -9,4 +9,8 @@
 
 # Day 3
 
-- Uptaded the RandomPassword file to use a better algrithom by Rajput-Ji on Geeks For Geeks. code is here: https://www.geeksforgeeks.org/generate-random-string-of-given-size-in-java/
+- Updated the RandomPassword file to use a better algrithom by Rajput-Ji on Geeks For Geeks. Code is here: https://www.geeksforgeeks.org/generate-random-string-of-given-size-in-java/
+
+# day 4
+
+- Updated the RandomPassword.java file to include a way to communicate with the python file.

@@ -8,26 +8,31 @@
 
 ####################################
 
-# Importing the GUI module for the app.
 import customtkinter as ctk
 
-# Setting the theme and the colour scheme.
 ctk.set_appearance_mode("Dark")
 ctk.set_default_color_theme("blue")
 
-# Top of the window code.
 window = ctk.CTk()
 
 window.geometry("300x300")  # this is window size
-window.title("Snake Pass")  # this is the window title
-
-# This button will start the java file.
-# Which is KeyReader.java
+window.title("Snake Pass")
+"""
+* This button will start the java file.
+* Which is KeyReader.java
+"""
 btn = ctk.CTkButton(master=window, text="Start").place(
     relx=0.5, rely=0.5, anchor=ctk.CENTER
 )
 
 # This the label to capture the key inputs and display them.
-# label = ctk.CTkLabel()
+output_label = ctk.CTkLabel(master=window, text="Pass").place(
+    relx=0.5, rely=0.3, anchor=ctk.N
+)
 
-window.mainloop()  # Buttom of the window code.
+window.mainloop()
+
+
+# TODO: This will run the java file then print it on a label.
+def generate_button():
+    pass

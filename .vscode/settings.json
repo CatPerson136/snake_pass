@@ -1,7 +1,10 @@
 {
-    "python.formatting.provider": "black",
-    "java.project.referencedLibraries": [
-        "lib/**/*.jar",
-        "src/com/cat/lib/py4j0.10.9.7.jar"
-    ]
+  "python.formatting.provider": "none",
+  "java.project.referencedLibraries": [
+    "lib/**/*.jar",
+    "src/com/cat/lib/py4j0.10.9.7.jar"
+  ],
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  }
 }
