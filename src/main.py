@@ -17,7 +17,6 @@ window = ctk.CTk()
 
 window.geometry("300x300")  # this is window size
 window.title("Snake Pass")
-
 """
 * This button will start the java file.
 * Which is KeyReader.java
@@ -28,7 +27,12 @@ btn = ctk.CTkButton(master=window, text="Start").place(
 
 # This the label to capture the key inputs and display them.
 output_label = ctk.CTkLabel(master=window, text="Pass").place(
-    relx=0.5, rely=0.5, anchor=ctk.TOP
+    relx=0.5, rely=0.3, anchor=ctk.N
 )
 
 window.mainloop()
+
+
+# TODO: This will run the java file then print it on a label.
+def generate_button():
+    pass
