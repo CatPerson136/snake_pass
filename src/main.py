@@ -9,6 +9,14 @@
 ####################################
 
 import customtkinter as ctk
+import subprocess as sb
+import os
+
+
+# This will run the java file then print it on a label.
+def generate_button():
+    output = sb.check_output(["java", "com/cat/RandomPassword.java"])
+
 
 ctk.set_appearance_mode("Dark")
 ctk.set_default_color_theme("blue")
@@ -21,7 +29,7 @@ window.title("Snake Pass")
 * This button will start the java file.
 * Which is KeyReader.java
 """
-btn = ctk.CTkButton(master=window, text="Start").place(
+btn = ctk.CTkButton(master=window, text="Start", command=generate_button).place(
     relx=0.5, rely=0.5, anchor=ctk.CENTER
 )
 
@@ -31,8 +39,3 @@ output_label = ctk.CTkLabel(master=window, text="Pass").place(
 )
 
 window.mainloop()
-
-
-# TODO: This will run the java file then print it on a label.
-def generate_button():
-    pass
