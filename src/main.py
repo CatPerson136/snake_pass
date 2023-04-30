@@ -30,6 +30,7 @@ window.title("Snake Pass")
 * Which is RandomPassword.java
 """
 
+# Generate button
 btn = ctk.CTkButton(master=window, text="Start", command=generate_string).place(
     relx=0.5, rely=0.5, anchor=ctk.CENTER
 )
