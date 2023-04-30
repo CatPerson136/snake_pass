@@ -15,6 +15,7 @@ import subprocess as sb
 # This will run the java file then print it on a label.
 def generate_string():
     output = sb.check_output(["java", "com/cat/RandomPassword.java"])
+    output_label.configure(text="rrrrrr")
 
 
 ctk.set_appearance_mode("Dark")
@@ -33,7 +34,7 @@ btn = ctk.CTkButton(master=window, text="Start", command=generate_string).place(
     relx=0.5, rely=0.5, anchor=ctk.CENTER
 )
 
-# This the label to capture the key inputs and display them.
+# This will display the password in the label
 output_label = ctk.CTkLabel(master=window, text="").place(
     relx=0.5, rely=0.3, anchor=ctk.N
 )
