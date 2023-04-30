@@ -28,6 +28,7 @@ window.title("Snake Pass")
 * This button will start the java file.
 * Which is RandomPassword.java
 """
+
 btn = ctk.CTkButton(master=window, text="Start", command=generate_string).place(
     relx=0.5, rely=0.5, anchor=ctk.CENTER
 )
