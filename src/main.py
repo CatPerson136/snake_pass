@@ -9,13 +9,8 @@
 ####################################
 
 import customtkinter as ctk
+import tkinter as tk
 import subprocess as sb
-
-
-# This will run the java file then print it on a label.
-def generate_string():
-    output = sb.check_output(["java", "com/cat/RandomPassword.java"])
-    output_label.configure(text="rrrrrr")
 
 
 ctk.set_appearance_mode("Dark")
@@ -25,19 +20,28 @@ window = ctk.CTk()
 
 window.geometry("300x300")  # this is window size
 window.title("Snake Pass")
+
 """
 * This button will start the java file.
 * Which is RandomPassword.java
 """
 
-# Generate button
+
+# This will run the java file then print it on a label.
+def generate_string():
+    output = sb.check_output(["java", "com/cat/RandomPassword.java"])
+    # This the label to capture the key inputs and display them.
+    f = output.decode("utf-8")
+    str_var = tk.StringVar()
+    str_var.set(f)
+    output_label = ctk.CTkEntry(
+        master=window, textvariable=str_var, width=200, height=40
+    ).place(relx=0.5, rely=0.3, anchor=ctk.N)
+
+
 btn = ctk.CTkButton(master=window, text="Start", command=generate_string).place(
     relx=0.5, rely=0.5, anchor=ctk.CENTER
 )
 
-# This will display the password in the label
-output_label = ctk.CTkLabel(master=window, text="").place(
-    relx=0.5, rely=0.3, anchor=ctk.N
-)
 
 window.mainloop()
