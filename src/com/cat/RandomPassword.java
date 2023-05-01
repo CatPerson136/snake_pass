@@ -14,7 +14,7 @@ public class RandomPassword {
         String passStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                 + "0123456789"
                 + "abcdefghijklmnopqrstuvxyz"
-                + "!@#$%^&*{}:w?";
+                + "!@#$%^&*{}?";
         // Creates StringBuffer the size of AlphaNumericString
         StringBuilder sb = new StringBuilder(n);
         for (int i = 0; i < n; i++) {
