@@ -39,7 +39,7 @@ def generate_string():
     ).place(relx=0.5, rely=0.3, anchor=ctk.N)
 
 
-btn = ctk.CTkButton(master=window, text="Start", command=generate_string).place(
+btn = ctk.CTkButton(master=window, text="Generate", command=generate_string).place(
     relx=0.5, rely=0.5, anchor=ctk.CENTER
 )
 
