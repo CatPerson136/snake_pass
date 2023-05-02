@@ -18,7 +18,7 @@ ctk.set_default_color_theme("blue")
 
 window = ctk.CTk()
 
-window.geometry("300x300")  # this is window size
+window.geometry("350x300")  # this is window size
 window.title("Snake Pass")
 
 """
@@ -35,7 +35,7 @@ def generate_string():
     str_var = tk.StringVar()
     str_var.set(f)
     output_label = ctk.CTkEntry(
-        master=window, textvariable=str_var, width=200, height=40
+        master=window, textvariable=str_var, width=250, height=40
     ).place(relx=0.5, rely=0.3, anchor=ctk.N)
 
 
