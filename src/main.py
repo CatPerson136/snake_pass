@@ -23,18 +23,19 @@ class App(ctk.CTk):
         self.title("Snake Pass")
         self.geometry("350x300")  # this is the size of the window
 
+        # A button to generate a radom password when clicked.
         self.btn = ctk.CTkButton(
             self, text="Generate", command=App.set_password_and_print_it_out
         ).place(relx=0.5, rely=0.5, anchor=ctk.CENTER)
 
     def set_password_and_print_it_out():
-        # gets 8 random ascii charters.
+        # Gets 8 random ascii charters and adds to a string.
         random_string = "".join(random.choices(string.ascii_letters, k=8))
 
-        # gets 4 random numbers.
+        # Gets 4 random numbers and adds to a string.
         random_int = "".join(random.choices(string.digits, k=4))
 
-        # Adds it to a f string and prints it out.
+        # Adds it to an f string and prints it out.
         password = f"{random_string}{random_int}"
         print(password)
 
