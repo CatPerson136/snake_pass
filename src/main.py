@@ -28,16 +28,16 @@ class App(ctk.CTk):
             self, text="Generate", command=App.set_password_and_print_it_out
         ).place(relx=0.5, rely=0.5, anchor=ctk.CENTER)
 
-    def set_password_and_print_it_out():
+    def set_password_and_print_it_out(self):
         # Gets 8 random ascii charters and adds to a string.
-        random_string = "".join(random.choices(string.ascii_letters, k=8))
+        self.random_string = "".join(random.choices(string.ascii_letters, k=8))
 
         # Gets 4 random numbers and adds to a string.
-        random_int = "".join(random.choices(string.digits, k=4))
+        self.random_int = "".join(random.choices(string.digits, k=4))
 
         # Adds it to an f string and prints it out.
-        password = f"{random_string}{random_int}"
-        print(password)
+        self.password = f"{self.random_string}{self.random_int}"
+        print(self.password)
 
 
 app = App()
