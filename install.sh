@@ -1,7 +1,7 @@
 # This will install it for Ubuntu and its dirivites
 if [ -d /etc/apt ]
 then
-    sudo apt install pip python3-tk
+    sudo apt install pip python3-tk default-jre
     pip install customtkinter 
 fi
 
