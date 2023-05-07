@@ -37,7 +37,11 @@ class App(ctk.CTk):
 
         # Adds it to an f string and prints it out.
         self.password = f"{self.random_string}{self.random_int}"
-        print(self.password)
+
+        # A text entry to print the password and allows it to be copied.
+        self.password_text_entry = ctk.CTkEntry(
+            self, width=160, height=40, textvariable=self.password
+        ).place(relx=0.3, rely=0.3, anchor=ctk.CENTER)
 
 
 app = App()
