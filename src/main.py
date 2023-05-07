@@ -21,7 +21,7 @@ class App(ctk.CTk):
         super().__init__()
 
         self.title("Snake Pass")
-        self.geometry("350x300")
+        self.geometry("350x300")  # this is the size of the window
 
         self.btn = ctk.CTkButton(
             self, text="Generate", command=Password.generate_string
