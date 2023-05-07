@@ -8,35 +8,25 @@
 
 ####################################
 
+from typing import Optional, Tuple, Union
 import customtkinter as ctk
-import tkinter as tk
-import subprocess as sb
+from password import Password
 
 ctk.set_appearance_mode("Dark")
 ctk.set_default_color_theme("blue")
 
-window = ctk.CTk()
 
-window.geometry("350x300")  # this is window size
-window.title("Snake Pass")
+class App(ctk.CTk):
+    def __init__(self):
+        super().__init__()
 
-"""
-* This button will start the java file.
-* Which is RandomPassword.java
-"""
+        self.title("Snake Pass")
+        self.geometry("350x300")
 
-# This will run the java file then print it on a label.
-def generate_string():
-    output = sb.check_output(["java", "com/cat/RandomPassword.java"])
-    f = output.decode("utf-8")
-    str_var = tk.StringVar()
-    str_var.set(f)
-    output_label = ctk.CTkEntry(
-        master=window, textvariable=str_var, width=250, height=40
-    ).place(relx=0.5, rely=0.3, anchor=ctk.N)
+        self.btn = ctk.CTkButton(
+            self, text="Generate", command=Password.generate_string
+        ).place(relx=0.5, rely=0.5, anchor=ctk.CENTER)
 
-btn = ctk.CTkButton(master=window, text="Generate", command=generate_string).place(
-    relx=0.5, rely=0.5, anchor=ctk.CENTER
-)
 
-window.mainloop()
+app = App()
+app.mainloop()
