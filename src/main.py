@@ -9,6 +9,7 @@
 ####################################
 
 import customtkinter as ctk
+import tkinter as tk
 import random
 import string
 
@@ -36,13 +37,18 @@ class App(ctk.CTk):
         self.random_int = "".join(random.choices(string.digits, k=4))
 
         # Adds it to an f string and prints it out.
-        self.password = f"{self.random_string}{self.random_int}"
+        self.password = f"{str(self.random_string)}{str(self.random_int)}"
+
+        # Converting self.password to a StringVar from tkinter.
+        self.password_to_string = tk.StringVar()
+        self.password_to_string.set(self.password)
 
         # A text entry to print the password and allows it to be copied.
         self.password_text_entry = ctk.CTkEntry(
-            self, width=160, height=40, textvariable=self.password
-        ).place(relx=0.3, rely=0.3, anchor=ctk.CENTER)
+            self, width=160, height=40, textvariable=self.password_to_string
+        ).place(relx=0.5, rely=0.3, anchor=ctk.CENTER)
 
 
 app = App()
+app.set_password_and_print_it_out()
 app.mainloop()

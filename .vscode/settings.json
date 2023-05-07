@@ -6,5 +6,6 @@
   ],
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter"
-  }
+  },
+  "godot_tools.scene_file_config": "/home/drew/Documents/Programing/snake_pass/run.sh"
 }
