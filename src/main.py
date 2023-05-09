@@ -23,6 +23,11 @@ class App(ctk.CTk):
         self.title("Snake Pass")
         self.geometry("350x300")  # this is the size of the window
 
+        # A label and input box for password length
+        self.length_label = ctk.CTkLabel(self, text="Password length:").place(relx=0.3, rely=0.64, anchor=ctk.CENTER)
+        self.length_input = ctk.CTkEntry(self, width=36)
+        self.length_input.place(relx=0.5, rely=0.64, anchor=ctk.CENTER)
+
         # A button to generate a radom password when clicked.
         self.btn = ctk.CTkButton(
             self, text="Generate", command=self.set_password_and_print_it_out
@@ -38,9 +43,18 @@ class App(ctk.CTk):
         self.clipboard_clear()
         self.clipboard_append(self.password)
 
-    # Gets 32 random ascii characters (uppercase, lowercase, digits, and punctuation)
     def set_password_and_print_it_out(self):
-        self.password = ''.join(random.choices(string.ascii_uppercase + string.ascii_lowercase + string.digits + string.punctuation, k=32))
+        # Gets the length of the password from the input box.
+        length_str = self.length_input.get()
+        try:
+            length = int(length_str)
+        except ValueError:
+            # If the input is not a valid integer, use the default length of 32.
+            length = 32
+            self.length_input.place(relx=0.5, rely=0.6, anchor=ctk.CENTER)
+
+        # Generates a random password with the specified length.
+        self.password = ''.join(random.choices(string.ascii_uppercase + string.ascii_lowercase + string.digits + string.punctuation, k=length))
 
         self.password_to_string = tk.StringVar()
         self.password_to_string.set(self.password)
