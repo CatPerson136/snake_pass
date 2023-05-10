@@ -9,14 +9,11 @@
 ####################################
 
 import customtkinter as ctk
-<<<<<<< HEAD
 import random
 import string
 import tkinter as tk
-=======
 import tkinter as tk
 import subprocess as sb
->>>>>>> main
 
 ctk.set_appearance_mode("Dark")
 ctk.set_default_color_theme("blue")
@@ -69,7 +66,6 @@ class App(ctk.CTk):
         self.password_text_entry = ctk.CTkEntry(
             master=app, width=260, height=40, textvariable=self.password_to_string
         ).place(relx=0.5, rely=0.3, anchor=ctk.CENTER)
-=======
 window = ctk.CTk()
 
 window.geometry("350x300")  # this is window size
@@ -93,6 +89,4 @@ def generate_string():
 btn = ctk.CTkButton(master=window, text="Generate", command=generate_string).place(
     relx=0.5, rely=0.5, anchor=ctk.CENTER
 )
->>>>>>> main
-
 window.mainloop()
