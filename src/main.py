@@ -3,6 +3,7 @@
 # Snake Pass
 
 # Copyright (C) 2023 Andrew Smith. MIT
+
 ####################################
 
 import customtkinter as ctk
