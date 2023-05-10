@@ -25,8 +25,7 @@ class App(ctk.CTk):
 
         # A label and input box for password length
         self.length_label = ctk.CTkLabel(self, text="Password length:").place(relx=0.3, rely=0.64, anchor=ctk.CENTER)
-        self.length_input = ctk.CTkEntry(self, width=36)
-        self.length_input.place(relx=0.5, rely=0.64, anchor=ctk.CENTER)
+        self.length_input = ctk.CTkEntry(self, width=36).place(relx=0.5, rely=0.64, anchor=ctk.CENTER)
 
         # A button to generate a radom password when clicked.
         self.btn = ctk.CTkButton(
