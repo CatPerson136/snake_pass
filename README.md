@@ -1,4 +1,4 @@
-# Snake Pass
+# Libre_Pass 1.0.1
 
 An open source and local python password generator. made to be easy and useful
 
