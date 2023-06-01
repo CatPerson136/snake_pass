@@ -10,6 +10,7 @@ import customtkinter as ctk
 import random
 import string
 import tkinter as tk
+import tkinter as tk
 import subprocess as sb
 
 ctk.set_appearance_mode("Dark")
@@ -65,6 +66,11 @@ window = ctk.CTk()
 
 window.geometry("350x300")  # this is window size
 window.title("Snake Pass")
+
+"""
+* This button will start the java file.
+* Which is RandomPassword.java
+"""
 
 # This will run the java file then print it on a label.
 def generate_string():
